@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { Button } from "../atoms/ui/button";
-import { NavItemProps } from "../organisms/navbar";
 
-export default function NavbarLinks({ items }: { items: NavItemProps }) {
+export default function NavbarLinks({
+  items,
+}: {
+  items: {
+    href: string;
+    label: string;
+  }[];
+}) {
   return items.map((item, i) => (
     <li key={i}>
       <Button asChild variant="link" className="font-medium">
