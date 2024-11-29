@@ -10,13 +10,8 @@ import NavbarLogo from "@/components/molecules/navbar-logo";
 import NavbarLinks from "../molecules/navbar-links";
 import Link from "next/link";
 
-export type NavItemProps = {
-  href: string;
-  label: string;
-}[];
-
 export default function Navbar() {
-  const NAV_ITEMS: NavItemProps = [
+  const NAV_ITEMS = [
     { href: "#about", label: "About Us" },
     { href: "#services", label: "Services" },
     { href: "#impact", label: "Our Impact" },
