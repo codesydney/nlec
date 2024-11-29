@@ -12,6 +12,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "nlec-orange": "#c6550b",
+        "nlec-darkGray": "#303E3F",
+        "nlec-darkBlue": "#002133",
       },
       borderRadius: {
         lg: "var(--radius)",
