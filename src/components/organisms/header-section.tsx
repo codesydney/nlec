@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeaderSection() {
   return (
-    <section className="relative flex min-h-[300px] flex-col justify-center px-4 md:min-h-[500px] md:px-8 xl:min-h-[600px] xl:px-20">
+    <section className="relative mb-8 flex min-h-[300px] flex-col justify-center px-4 md:mb-16 md:min-h-[500px] md:px-8 xl:mb-20 xl:min-h-[600px] xl:px-20">
       <Image
         src="/header-image.jpg"
         fill
@@ -15,9 +15,9 @@ export default function HeaderSection() {
         <h1 className="text-4xl font-bold text-white md:w-9/12 md:text-5xl xl:text-6xl">
           Empowering Voices with Lived Prison Experience
         </h1>
-        <h3 className="text-white md:text-lg md:font-medium xl:text-xl">
+        <p className="text-white md:text-lg md:font-medium xl:text-xl">
           Connecting Advocacy, Insight, and Opportunity for Social Change
-        </h3>
+        </p>
       </div>
     </section>
   );

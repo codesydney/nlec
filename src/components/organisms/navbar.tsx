@@ -1,8 +1,14 @@
-import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/atoms/ui/sheet";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/atoms/ui/button";
 import NavbarLogo from "@/components/molecules/navbar-logo";
 import NavbarLinks from "../molecules/navbar-links";
+import Link from "next/link";
 
 export type NavItemProps = {
   href: string;
@@ -30,9 +36,17 @@ export default function Navbar() {
               <Menu className="h-full" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="top">
+          <SheetContent>
             <ul className="inline-flex flex-col gap-2">
-              <NavbarLinks items={NAV_ITEMS} />
+              {NAV_ITEMS.map((item, i) => (
+                <li key={i}>
+                  <SheetClose asChild>
+                    <Button asChild variant="link" className="font-medium">
+                      <Link href={item.href}>{item.label}</Link>
+                    </Button>
+                  </SheetClose>
+                </li>
+              ))}
             </ul>
           </SheetContent>
         </Sheet>
