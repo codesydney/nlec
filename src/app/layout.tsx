@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/organisms/navbar";
 import { cn } from "@/lib/utils";
 import { inter } from "@/assets/fonts";
+import Footer from "@/components/organisms/footer";
 
 export const metadata: Metadata = {
   title: "NLEC app",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={cn("antialiased", inter.className)}>
         <Navbar />
         <main className="mt-[65px] md:mt-[69px] xl:mt-[73px]">{children}</main>
+        <Footer />
       </body>
     </html>
   );
