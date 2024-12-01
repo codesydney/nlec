@@ -1,6 +1,8 @@
 import { FileText, HeartHandshake, Megaphone, Mic2, Scale } from "lucide-react";
 import SectionTitle from "../atoms/section-title";
 import { Card, CardDescription, CardTitle } from "../atoms/ui/card";
+import SectionWrapper from "../molecules/section-wrapper";
+import ContentWrapper from "../molecules/content-wrapper";
 
 export default function ServicesSection() {
   const SERVICE_ITEMS = [
@@ -51,13 +53,14 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="mb-8 px-4 md:px-8 xl:px-20">
-      <div className="mx-auto max-w-[1280px]">
-        <SectionTitle className="mb-4 md:mb-6">What We Offer</SectionTitle>
+    <SectionWrapper id="services">
+      <ContentWrapper>
+        <SectionTitle>What We Offer</SectionTitle>
         <div className="mb-12 grid gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
           {SERVICE_ITEMS.map((item, i) => (
             <Card key={i}>
               <CardTitle level="h3">
+                {/* SUGGESTION: Use an illustration for the images like in the old site. It's more interesting and looks better than simple images */}
                 {<item.icon className="size-10" />}
                 {item.title}
               </CardTitle>
@@ -66,10 +69,10 @@ export default function ServicesSection() {
           ))}
         </div>
         <div className="rounded-lg bg-nlec-orange px-4 py-6 text-white md:px-6">
-          <h3 className="mb-4 text-2xl font-semibold">
+          <h3 className="mb-4 text-2xl font-semibold xl:text-3xl">
             Compensation and Fair Engagement
           </h3>
-          <p className="mb-6">
+          <p className="mb-6 xl:text-lg">
             We are committed to ensuring equitable compensation for the
             expertise of people with lived prison experiences. Drawing
             inspiration from the Western Australian Association for Mental
@@ -80,10 +83,8 @@ export default function ServicesSection() {
             {COMPENSATION_ITEMS.map((item, i) => (
               <Card key={i} className="shadow-none">
                 <div>
-                  <CardTitle level="h4" className="text-xl">
-                    {item.level}
-                  </CardTitle>
-                  <p className="text-sm text-nlec-orange">
+                  <CardTitle level="h4">{item.level}</CardTitle>
+                  <p className="text-sm text-nlec-orange xl:text-base">
                     {item.compensation}
                   </p>
                 </div>
@@ -91,13 +92,13 @@ export default function ServicesSection() {
               </Card>
             ))}
           </div>
-          <p>
+          <p className="xl:text-lg">
             This ensures transparency and fairness while promoting meaningful
             participation across all activities, from individual engagements to
             high-level advisory roles.
           </p>
         </div>
-      </div>
-    </section>
+      </ContentWrapper>
+    </SectionWrapper>
   );
 }

@@ -1,14 +1,13 @@
 import Image from "next/image";
 import SectionTitle from "../atoms/section-title";
+import SectionWrapper from "../molecules/section-wrapper";
+import ContentWrapper from "../molecules/content-wrapper";
 
 export default function AboutSection() {
   return (
-    <section
-      id="about"
-      className="mb-20 px-4 md:mb-32 md:px-8 xl:mb-44 xl:px-20"
-    >
-      <div className="mx-auto grid max-w-[1280px] items-center gap-6 md:grid-cols-[auto_40%]">
-        <div className="inline-flex flex-col gap-2 md:gap-4">
+    <SectionWrapper id="about">
+      <ContentWrapper className="grid items-center gap-6 md:grid-cols-[auto_40%]">
+        <div>
           <SectionTitle>About Us</SectionTitle>
           <p className="text-nlec-darkGray xl:text-lg">
             We are the national collective of formerly incarcerated people
@@ -21,6 +20,7 @@ export default function AboutSection() {
             we represent.
           </p>
         </div>
+        {/* SUGGESTION: Use an illustration for the images like in the old site. It's more interesting and looks better than simple images */}
         <div className="relative aspect-video max-h-[320px] w-full rounded shadow-lg shadow-nlec-orange/50 md:aspect-square">
           <Image
             src="/about-image.jpg"
@@ -29,7 +29,7 @@ export default function AboutSection() {
             className="rounded object-cover object-right"
           />
         </div>
-      </div>
-    </section>
+      </ContentWrapper>
+    </SectionWrapper>
   );
 }
