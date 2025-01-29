@@ -15,6 +15,8 @@ export default {
         "nlec-orange": "#c6550b",
         "nlec-darkGray": "#303E3F",
         "nlec-darkBlue": "#002133",
+        "nlec-cream": "#F5ECE5",
+        "nlec-green": "#1B667B",
       },
       borderRadius: {
         lg: "var(--radius)",
