@@ -1,3 +1,4 @@
+import { redHatDisplay } from "@/assets/fonts";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -11,7 +12,8 @@ export default function SectionTitle({
   return (
     <h2
       className={cn(
-        "mb-4 text-3xl font-bold text-nlec-orange md:mb-6 md:text-4xl",
+        "mb-4 text-5xl font-semibold md:mb-6 md:text-6xl xl:text-7xl",
+        redHatDisplay.className,
         className
       )}
     >

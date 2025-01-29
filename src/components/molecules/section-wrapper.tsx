@@ -8,7 +8,7 @@ export default function SectionWrapper({
   id: string;
 }) {
   return (
-    <section id={id} className="mb-20 px-4 md:mb-32 md:px-8 xl:mb-44 xl:px-20">
+    <section id={id} className="mb-12 px-4 md:mb-20 md:px-8 xl:mb-32 xl:px-20">
       {children}
     </section>
   );
