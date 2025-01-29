@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { redHatDisplay } from "@/assets/fonts";
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -8,10 +9,7 @@ const Card = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "flex flex-col gap-4 rounded-lg border border-nlec-darkGray/25 bg-white px-4 py-6 text-nlec-darkGray shadow-sm shadow-nlec-darkGray/50 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 md:px-6",
-      className
-    )}
+    className={cn("flex gap-6 px-4 py-6 md:px-6", className)}
     {...props}
   />
 ));
@@ -27,7 +25,8 @@ const CardTitle = React.forwardRef<
     <Comp
       ref={ref}
       className={cn(
-        "inline-flex items-center gap-4 text-lg font-semibold md:text-xl xl:text-2xl",
+        "inline-flex items-center gap-4 text-lg font-bold md:text-xl xl:text-2xl",
+        redHatDisplay.className,
         className
       )}
       {...props}
@@ -40,14 +39,7 @@ const CardDescription = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "text-nlec-darkGray dark:text-zinc-400 xl:text-lg",
-      className
-    )}
-    {...props}
-  />
+  <div ref={ref} className={cn("xl:text-lg", className)} {...props} />
 ));
 CardDescription.displayName = "CardDescription";
 
