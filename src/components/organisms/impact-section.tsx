@@ -1,6 +1,4 @@
-import Image from "next/image";
 import SectionTitle from "../atoms/section-title";
-import { cn } from "@/lib/utils";
 import SectionWrapper from "../molecules/section-wrapper";
 import ContentWrapper from "../molecules/content-wrapper";
 
@@ -40,23 +38,20 @@ export default function ImpactSection() {
 
   return (
     <SectionWrapper id="impact">
-      <ContentWrapper>
-        <SectionTitle>Our Impact</SectionTitle>
-        <div className="grid gap-8 sm:grid-cols-2">
-          {IMPACT_ITEMS.map((item, i) => (
-            <div key={i} className="inline-flex flex-col gap-2">
-              <div className="relative aspect-video max-h-[18rem] w-full">
-                <Image
-                  src={item.image.src}
-                  alt={item.image.alt}
-                  fill
-                  className={cn("object-cover", item.image.position)}
-                />
-              </div>
-              <p className="px-2 xl:text-lg">{item.description}</p>
-            </div>
-          ))}
+      <ContentWrapper className="flex flex-col overflow-hidden text-nlec-green">
+        <div className="mb-4 flex flex-col gap-4 md:mb-8 md:flex-row md:items-center">
+          <SectionTitle className="mb-0 w-fit text-nlec-maroon md:mb-0 md:min-w-[324px] xl:min-w-[389px]">
+            Our <span className="font-black">Impact</span>
+          </SectionTitle>
+          <div className="relative h-1 w-full bg-nlec-maroon" />
         </div>
+        <ol className="inline-flex flex-col gap-4 pl-4">
+          {IMPACT_ITEMS.map((item, i) => (
+            <li key={i} className="list-disc md:text-lg">
+              {item.description}
+            </li>
+          ))}
+        </ol>
       </ContentWrapper>
     </SectionWrapper>
   );
