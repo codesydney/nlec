@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Navbar from "@/components/organisms/navbar";
 import { cn } from "@/lib/utils";
 import { inter } from "@/assets/fonts";
 import Footer from "@/components/organisms/footer";
@@ -17,12 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      // className="scroll-pt-[calc(65px+1rem)] scroll-smooth md:scroll-pt-[calc(69px+2rem)] xl:scroll-pt-[calc(73px+3rem)]"
-    >
+    <html lang="en">
       <body className={cn("bg-nlec-cream antialiased", inter.className)}>
-        {/* <Navbar /> */}
         <main>{children}</main>
         <Footer />
         <Toaster />

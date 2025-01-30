@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <SectionWrapper id="about">
       <ContentWrapper className="flex flex-col text-nlec-green">
-        <SectionTitle className="w-[160px] md:w-[200px] xl:w-[250px]">
+        <SectionTitle className="w-1/12">
           About <span className="font-black">Us</span>
         </SectionTitle>
         <p className="w-4/5 self-end text-lg md:text-xl xl:text-2xl">

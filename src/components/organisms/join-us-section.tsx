@@ -15,7 +15,7 @@ export default function JoinUsSection() {
           </SectionTitle>
           <div className="relative h-1 w-full bg-nlec-green" />
         </div>
-        <div className="grid gap-4 md:h-[300px] md:grid-cols-3 xl:h-[500px]">
+        <div className="grid gap-4 md:h-72 md:grid-cols-3 xl:h-[500px]">
           <div className="grid h-[400px] grid-rows-[30%_auto] gap-4 md:h-full">
             <div className="grid grid-cols-[30%_auto] gap-4">
               <div className="size-full bg-nlec-maroon" />

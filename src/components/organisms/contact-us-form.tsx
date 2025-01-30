@@ -40,9 +40,14 @@ export default function ContactUsForm() {
     };
 
     emailjs
-      .send("service_g0ej8rl", "template_v3298ya", templateParams, {
-        publicKey: "user_nEmQ6yi4aBPvlCKCkUAfK",
-      })
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        templateParams,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        }
+      )
       .then(() => {
         toast({ title: "Email sent successfully!" });
         setIsFormPending(false);

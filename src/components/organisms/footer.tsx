@@ -1,44 +1,13 @@
 import Link from "next/link";
 import ContentWrapper from "../molecules/content-wrapper";
 import { Button } from "../atoms/ui/button";
-import Fb from "../../../public/fb";
-import Twitter from "../../../public/twitter";
 import SectionTitle from "../atoms/section-title";
 import { cn } from "@/lib/utils";
 import { redHatDisplay } from "@/assets/fonts";
-import { Instagram } from "lucide-react";
 import ContactUsForm from "./contact-us-form";
+import { FOOTER_ITEMS } from "@/assets/data";
 
 export default function Footer() {
-  const FOOTER_ITEMS = {
-    links: [
-      {
-        label: "Email",
-        content: "tina@justicereforminitiative.org.au",
-        href: "mailto:tina@justicereforminitiative.org.au",
-      },
-      {
-        label: "Phone",
-        content: "+61 123 456 789",
-        href: "tel:+61123456789",
-      },
-      {
-        label: "Address",
-        content: "Canberra, ACT 2600, Australia",
-        href: "https://maps.app.goo.gl/xDYHRutBSzwCfagf7",
-      },
-    ],
-    socials: [
-      { icon: Fb, href: "#" },
-      { icon: Twitter, href: "#" },
-      { icon: Instagram, href: "#" },
-    ],
-    "TOS-PP": [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms Of Use", href: "#" },
-    ],
-  };
-
   return (
     <footer className="px-4 py-12 pb-24 text-nlec-green md:px-8 xl:px-20">
       <ContentWrapper>
