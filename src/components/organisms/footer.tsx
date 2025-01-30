@@ -3,7 +3,11 @@ import ContentWrapper from "../molecules/content-wrapper";
 import { Button } from "../atoms/ui/button";
 import Fb from "../../../public/fb";
 import Twitter from "../../../public/twitter";
-import Linkedin from "../../../public/linkedin";
+import SectionTitle from "../atoms/section-title";
+import { cn } from "@/lib/utils";
+import { redHatDisplay } from "@/assets/fonts";
+import { Instagram } from "lucide-react";
+import ContactUsForm from "./contact-us-form";
 
 export default function Footer() {
   const FOOTER_ITEMS = {
@@ -27,71 +31,66 @@ export default function Footer() {
     socials: [
       { icon: Fb, href: "#" },
       { icon: Twitter, href: "#" },
-      { icon: Linkedin, href: "#" },
+      { icon: Instagram, href: "#" },
+    ],
+    "TOS-PP": [
+      { label: "Privacy Policy", href: "#" },
+      { label: "Terms Of Use", href: "#" },
     ],
   };
 
   return (
-    <footer className="bg-nlec-darkBlue px-4 py-12 text-white md:px-8 xl:px-20">
+    <footer className="px-4 py-12 pb-24 text-nlec-green md:px-8 xl:px-20">
       <ContentWrapper>
-        <div>
-          <h1 className="mb-1 text-2xl font-bold text-nlec-orange md:text-3xl">
-            Connect With Us
-          </h1>
-          <div className="inline-flex flex-col gap-4 sm:flex-row sm:gap-8 md:gap-12">
-            <ul>
-              {FOOTER_ITEMS.links.map((item, i) => (
-                <li key={i}>
-                  <span className="font-semibold text-nlec-orange">
-                    {item.label}
-                  </span>
-                  :{" "}
+        <div className="mb-4 flex flex-col gap-4 md:mb-8 md:flex-row">
+          <SectionTitle className="mb-0 w-fit md:mb-0">
+            Contact <span className="font-black">Us.</span>
+          </SectionTitle>
+          <div className="relative h-1 w-full bg-nlec-green" />
+        </div>
+        <div className="grid gap-8 md:grid-cols-[60%_auto] md:gap-6">
+          <ContactUsForm />
+          <div className={cn("flex flex-col gap-6", redHatDisplay.className)}>
+            {FOOTER_ITEMS.links.map((link, i) => (
+              <div key={i}>
+                <h3 className="text-3xl font-bold">{link.label}</h3>
+                <Button asChild variant="link" className="w-fit p-0">
+                  <Link href={link.href}>{link.content}</Link>
+                </Button>
+              </div>
+            ))}
+            <div className="inline-flex flex-col gap-2">
+              <h3 className="text-3xl font-bold">Socials</h3>
+              <div className="inline-flex gap-4">
+                {FOOTER_ITEMS.socials.map((social, i) => (
                   <Button
+                    key={i}
                     asChild
                     variant="link"
-                    size="none"
-                    className="text-white hover:text-white"
+                    className="group rounded-full border border-nlec-green p-2 hover:border-nlec-orange"
                   >
-                    <Link href={item.href}>{item.content}</Link>
+                    <Link href={social.href}>
+                      <social.icon
+                        className={`h-6 ${i === 2 ? "outline-nlec-green group-hover:outline-nlec-orange" : "fill-nlec-green group-hover:fill-nlec-orange"}`}
+                      />
+                    </Link>
                   </Button>
-                </li>
+                ))}
+              </div>
+            </div>
+            <p>Empowering lived prison experiences for a better tomorrow.</p>
+            <div className="divide-x-2 divide-nlec-green">
+              {FOOTER_ITEMS["TOS-PP"].map((link, i) => (
+                <Button
+                  asChild
+                  variant="link"
+                  className={`rounded-none p-0 ${i === 0 ? "pr-4" : "pl-4"}`}
+                  key={i}
+                >
+                  <Link href={link.href}>{link.label}</Link>
+                </Button>
               ))}
-            </ul>
-            <ul className="inline-flex gap-4 sm:gap-6 md:gap-8">
-              {FOOTER_ITEMS.socials.map((social, i) => (
-                <Link key={i} href={social.href} className="size-6">
-                  {
-                    <social.icon className="fill-white transition-all ease-in-out hover:fill-nlec-orange" />
-                  }
-                </Link>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="mt-4 flex flex-col items-center border-t border-nlec-orange pt-4 text-center text-sm">
-          <div className="md:inline-flex">
-            <p>© {new Date().getFullYear()} Lived Experts Collective</p>
-            <p className="md:ml-2 md:border-l md:border-nlec-orange md:pl-2">
-              Empowering lived prison experiences for a better tomorrow.
-            </p>
-          </div>
-          <div className="mt-2 inline-flex gap-4">
-            <Button
-              asChild
-              variant="link"
-              size="none"
-              className="text-nlec-orange"
-            >
-              <Link href="#">Privacy Policy</Link>
-            </Button>
-            <Button
-              asChild
-              variant="link"
-              size="none"
-              className="text-nlec-orange"
-            >
-              <Link href="#">Terms Of Use</Link>
-            </Button>
+            </div>
           </div>
         </div>
       </ContentWrapper>

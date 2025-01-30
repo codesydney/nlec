@@ -19,7 +19,7 @@ const buttonVariants = cva(
           "bg-zinc-100 text-zinc-900 hover:bg-zinc-100/80 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-800/80",
         ghost:
           "hover:bg-nlec-darkGray/10 text-nlec-darkGray dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
-        link: "text-nlec-darkGray underline-offset-4 hover:underline hover:text-nlec-orange dark:text-zinc-50",
+        link: "text-nlec-green underline-offset-4 hover:underline hover:text-nlec-orange dark:text-zinc-50",
         logo: "text-nlec-darkGray text-2xl font-medium hover:bg-nlec-darkGray/10 md:text-3xl xl:text-4xl",
       },
       size: {

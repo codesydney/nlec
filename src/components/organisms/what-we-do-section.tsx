@@ -38,9 +38,10 @@ export default function WhatWeDoSection() {
           contributions of our members:
         </p>
 
-        <div className="mx-auto mb-4 grid max-w-[768px] gap-4 sm:grid-cols-2">
+        <div className="mb-4 grid max-w-[768px] gap-4 sm:grid-cols-2">
           {COMPENSATION_ITEMS.map((item, i) => (
-            <Card key={i} className="shadow-none">
+            <Card key={i} className="flex-col gap-4 shadow-none">
+              <div className="w-fit bg-nlec-maroon px-2 py-1 text-white">{`0${i + 1}`}</div>
               <div>
                 <CardTitle level="h4">{item.level}</CardTitle>
                 <p className="text-sm text-nlec-orange xl:text-base">
