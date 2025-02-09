@@ -39,9 +39,7 @@ export default function Footer() {
                     className="group rounded-full border border-nlec-green p-2 hover:border-nlec-orange"
                   >
                     <Link href={social.href}>
-                      <social.icon
-                        className={`h-6 ${i === 2 ? "outline-nlec-green group-hover:outline-nlec-orange" : "fill-nlec-green group-hover:fill-nlec-orange"}`}
-                      />
+                      <social.icon className="h-6 fill-nlec-green group-hover:fill-nlec-orange" />
                     </Link>
                   </Button>
                 ))}

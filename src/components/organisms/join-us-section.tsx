@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import SectionTitle from "../atoms/section-title";
-import ContentWrapper from "../molecules/content-wrapper";
-import SectionWrapper from "../molecules/section-wrapper";
+import SectionTitle from "@/components/atoms/section-title";
+import ContentWrapper from "@/components/molecules/content-wrapper";
+import SectionWrapper from "@/components/molecules/section-wrapper";
 import { redHatDisplay } from "@/assets/fonts";
 import Image from "next/image";
 

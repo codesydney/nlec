@@ -1,39 +1,12 @@
-import SectionTitle from "../atoms/section-title";
-import { Card, CardDescription, CardTitle } from "../atoms/ui/card";
-import SectionWrapper from "../molecules/section-wrapper";
-import ContentWrapper from "../molecules/content-wrapper";
+import SectionTitle from "@/components/atoms/section-title";
+import { Card, CardDescription, CardTitle } from "@/components/atoms/ui/card";
+import SectionWrapper from "@/components/molecules/section-wrapper";
+import ContentWrapper from "@/components/molecules/content-wrapper";
 import { cn } from "@/lib/utils";
 import { redHatDisplay } from "@/assets/fonts";
+import { SERVICE_ITEMS } from "@/assets/data";
 
 export default function ServicesSection() {
-  const SERVICE_ITEMS = [
-    {
-      title: "Speaker and Consultant Network",
-      description:
-        "Connecting people with lived prison experience for speaking engagements, consulting, writing, and special projects.",
-    },
-    {
-      title: "Standardised Engagement Framework",
-      description:
-        "Providing fee schedules and ethical guidelines to ensure fair treatment and minimise exploitation.",
-    },
-    {
-      title: "Support and Coaching Services",
-      description:
-        "Offering advice and coaching to prepare for interviews, manage challenging situations, or debrief after difficult experiences.",
-    },
-    {
-      title: "Media and Advocacy Support",
-      description:
-        "Guiding media engagements to avoid harm and exploitation while amplifying authentic voices.",
-    },
-    {
-      title: "Systemic Advocacy and Campaigns",
-      description:
-        "Identifying and addressing systemic issues impacting the lived experience community through strategic campaigns and policy advisories.",
-    },
-  ];
-
   return (
     <SectionWrapper id="services">
       <ContentWrapper className="flex flex-col text-nlec-green">
@@ -55,7 +28,7 @@ export default function ServicesSection() {
             <Card key={i}>
               <div
                 className={cn(
-                  "text-5xl font-black drop-shadow",
+                  "min-w-[64px] text-5xl font-black drop-shadow",
                   redHatDisplay.className,
                   i === 0
                     ? "text-[#ef991e]"

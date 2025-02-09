@@ -1,6 +1,7 @@
 import { redHatDisplay } from "@/assets/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import nlecHeader from "../../../public/nlec-header.webp";
 
 export default function HeaderSection() {
   return (
@@ -25,7 +26,7 @@ export default function HeaderSection() {
       </div>
       <div className="relative h-[300px] w-full md:h-[400px] xl:h-[500px]">
         <Image
-          src="/nlec-header.jpg"
+          src={nlecHeader}
           alt="Art of people together"
           fill
           priority

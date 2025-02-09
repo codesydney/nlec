@@ -1,24 +1,11 @@
-import SectionTitle from "../atoms/section-title";
-import { Card, CardDescription, CardTitle } from "../atoms/ui/card";
-import SectionWrapper from "../molecules/section-wrapper";
-import ContentWrapper from "../molecules/content-wrapper";
+import SectionTitle from "@/components/atoms/section-title";
+import { Card, CardDescription, CardTitle } from "@/components/atoms/ui/card";
+import SectionWrapper from "@/components/molecules/section-wrapper";
+import ContentWrapper from "@/components/molecules/content-wrapper";
 import { cn } from "@/lib/utils";
+import { COMPENSATION_ITEMS } from "@/assets/data";
 
 export default function WhatWeDoSection() {
-  const COMPENSATION_ITEMS = [
-    {
-      level: "Participant Level",
-      compensation: "$35 per hour (minimum 3 hours)",
-      description:
-        "for contributions requiring an individual perspective or low-medium level expertise.",
-    },
-    {
-      level: "Advisor Level",
-      compensation: "$65 per hour (minimum 3 hours)",
-      description: "for providing advanced advice or broader perspectives.",
-    },
-  ];
-
   return (
     <SectionWrapper id="services">
       <ContentWrapper className="flex flex-col text-nlec-green">
@@ -26,7 +13,7 @@ export default function WhatWeDoSection() {
           <SectionTitle className="mb-0 text-nlec-maroon md:mb-0">
             What We <span className="font-black">Do</span>
           </SectionTitle>
-          <div className={cn("text-center text-2xl xl:text-3xl")}>
+          <div className={cn("text-2xl xl:text-3xl")}>
             COMPENSATION AND FAIR ENGAGEMENT
           </div>
         </div>

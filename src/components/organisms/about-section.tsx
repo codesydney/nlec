@@ -1,6 +1,6 @@
-import SectionTitle from "../atoms/section-title";
-import SectionWrapper from "../molecules/section-wrapper";
-import ContentWrapper from "../molecules/content-wrapper";
+import SectionTitle from "@/components/atoms/section-title";
+import SectionWrapper from "@/components/molecules/section-wrapper";
+import ContentWrapper from "@/components/molecules/content-wrapper";
 
 export default function AboutSection() {
   return (
