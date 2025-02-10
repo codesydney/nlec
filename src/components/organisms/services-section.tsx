@@ -1,3 +1,5 @@
+"use client";
+
 import SectionTitle from "@/components/atoms/section-title";
 import { Card, CardDescription, CardTitle } from "@/components/atoms/ui/card";
 import SectionWrapper from "@/components/molecules/section-wrapper";
@@ -5,12 +7,20 @@ import ContentWrapper from "@/components/molecules/content-wrapper";
 import { cn } from "@/lib/utils";
 import { redHatDisplay } from "@/assets/fonts";
 import { SERVICE_ITEMS } from "@/assets/data";
+import { motion } from "motion/react";
+import { variants } from "@/lib/motion-variants";
 
 export default function ServicesSection() {
   return (
     <SectionWrapper id="services">
-      <ContentWrapper className="flex flex-col text-nlec-green">
-        <div className="mb-4 flex flex-col gap-4 md:mb-8 md:flex-row md:justify-between">
+      <ContentWrapper
+        className="flex flex-col text-nlec-green"
+        shouldTransition
+      >
+        <motion.div
+          className="mb-4 flex flex-col gap-4 md:mb-8 md:flex-row md:justify-between"
+          variants={variants}
+        >
           <SectionTitle className="mb-0 md:mb-0">
             What We <span className="font-black">Offer</span>
           </SectionTitle>
@@ -22,8 +32,11 @@ export default function ServicesSection() {
           >
             Lived Experience
           </div>
-        </div>
-        <div className="mb-12 grid gap-4 border-2 border-transparent border-l-nlec-maroon px-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
+        </motion.div>
+        <motion.div
+          className="mb-12 grid gap-4 border-2 border-transparent border-l-nlec-maroon px-4 md:grid-cols-2 md:gap-6 xl:grid-cols-3"
+          variants={variants}
+        >
           {SERVICE_ITEMS.map((item, i) => (
             <Card key={i}>
               <div
@@ -47,7 +60,7 @@ export default function ServicesSection() {
               </div>
             </Card>
           ))}
-        </div>
+        </motion.div>
       </ContentWrapper>
     </SectionWrapper>
   );
