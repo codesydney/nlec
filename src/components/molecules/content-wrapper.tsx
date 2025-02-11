@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 import { motion } from "motion/react";
 import { variants } from "@/lib/motion-variants";
+import useCheckWidth from "@/hooks/useCheckWidth";
 
 export default function ContentWrapper({
   children,
@@ -14,6 +15,9 @@ export default function ContentWrapper({
   className?: string;
   shouldTransition?: boolean;
 }) {
+  const { width } = useCheckWidth();
+  const viewportAmount = width !== undefined && width > 768 ? 0.25 : 0.125;
+
   return (
     <motion.div
       variants={variants}
@@ -21,7 +25,7 @@ export default function ContentWrapper({
       whileInView={"animate"}
       transition={shouldTransition ? { staggerChildren: 0.125 } : undefined}
       className={cn("mx-auto max-w-[1280px]", className)}
-      viewport={{ amount: 0.25, once: true }}
+      viewport={{ amount: viewportAmount, once: true }}
     >
       {children}
     </motion.div>
