@@ -1,6 +1,6 @@
-import Fb from "../../public/fb";
-import Twitter from "../../public/twitter";
-import Instagram from "../../public/instagram";
+import Fb from "@/public/fb";
+import Twitter from "@/public/twitter";
+import Instagram from "@/public/instagram";
 
 export const FOOTER_ITEMS = {
   links: [

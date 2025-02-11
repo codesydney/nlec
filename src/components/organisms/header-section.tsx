@@ -3,7 +3,7 @@
 import { redHatDisplay } from "@/assets/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import nlecHeader from "../../../public/nlec-header.webp";
+import nlecHeader from "@/public/nlec-header.webp";
 import { motion } from "motion/react";
 import { variants } from "@/lib/motion-variants";
 
