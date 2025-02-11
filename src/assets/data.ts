@@ -79,3 +79,10 @@ export const COMPENSATION_ITEMS = [
     description: "for providing advanced advice or broader perspectives.",
   },
 ];
+
+export const NAV_ITEMS = [
+  { href: "#about", label: "About Us" },
+  { href: "#services", label: "Services" },
+  { href: "#impact", label: "Our Impact" },
+  { href: "#join", label: "Join Us" },
+];
