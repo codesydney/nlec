@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { inter } from "@/assets/fonts";
 import Footer from "@/components/organisms/footer";
 import { Toaster } from "@/components/atoms/ui/toaster";
+import Navbar from "@/components/organisms/navbar";
 
 export const metadata: Metadata = {
   title: "NLEC app",
@@ -16,9 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scroll-pt-[calc(64.6667px+1.5rem)] scroll-smooth md:scroll-pt-[calc(68.6667px+1.5rem)] xl:scroll-pt-[calc(72.6667px+1.5rem)]"
+    >
       <body className={cn("bg-nlec-cream antialiased", inter.className)}>
-        <main>{children}</main>
+        <Navbar />
+        <main className={`mt-[64.6667px] md:mt-[68.6667px] xl:mt-[72.6667px]`}>
+          {children}
+        </main>
         <Footer />
         <Toaster />
       </body>

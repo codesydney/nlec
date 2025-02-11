@@ -1,21 +1,34 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import SectionTitle from "../atoms/section-title";
-import ContentWrapper from "../molecules/content-wrapper";
-import SectionWrapper from "../molecules/section-wrapper";
+import SectionTitle from "@/components/atoms/section-title";
+import ContentWrapper from "@/components/molecules/content-wrapper";
+import SectionWrapper from "@/components/molecules/section-wrapper";
 import { redHatDisplay } from "@/assets/fonts";
 import Image from "next/image";
+import { motion } from "motion/react";
+import { variants } from "@/lib/motion-variants";
 
 export default function JoinUsSection() {
   return (
     <SectionWrapper id="join">
-      <ContentWrapper className="flex flex-col text-nlec-green">
-        <div className="mb-4 flex flex-col gap-4 md:mb-8 md:flex-row md:items-center">
+      <ContentWrapper
+        className="flex flex-col text-nlec-green"
+        shouldTransition
+      >
+        <motion.div
+          className="mb-4 flex flex-col gap-4 md:mb-8 md:flex-row md:items-center"
+          variants={variants}
+        >
           <SectionTitle className="mb-0 w-fit md:mb-0 md:min-w-[324px] xl:min-w-[389px]">
             Join the <span className="font-black">Movement</span>
           </SectionTitle>
           <div className="relative h-1 w-full bg-nlec-green" />
-        </div>
-        <div className="grid gap-4 md:h-72 md:grid-cols-3 xl:h-[500px]">
+        </motion.div>
+        <motion.div
+          className="grid gap-4 md:h-72 md:grid-cols-3 xl:h-[500px]"
+          variants={variants}
+        >
           <div className="grid h-[400px] grid-rows-[30%_auto] gap-4 md:h-full">
             <div className="grid grid-cols-[30%_auto] gap-4">
               <div className="size-full bg-nlec-maroon" />
@@ -51,7 +64,7 @@ export default function JoinUsSection() {
             </div>
             <div className="size-full bg-nlec-maroon" />
           </div>
-        </div>
+        </motion.div>
       </ContentWrapper>
     </SectionWrapper>
   );

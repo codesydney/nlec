@@ -1,6 +1,6 @@
-import { Instagram } from "lucide-react";
-import Fb from "../../public/fb";
-import Twitter from "../../public/twitter";
+import Fb from "@/public/fb";
+import Twitter from "@/public/twitter";
+import Instagram from "@/public/instagram";
 
 export const FOOTER_ITEMS = {
   links: [
@@ -36,4 +36,53 @@ export const IMPACT_ITEMS = [
   "Developed resources, such as media guidelines and policy engagement frameworks, that set a new standard for working with lived experience contributors.",
   "Hosted workshops and webinars to empower our members with skills for public speaking, consulting, and advocacy.",
   "Advocated for systemic changes, addressing issues identified within the community, and driving social transformation.",
+];
+
+export const SERVICE_ITEMS = [
+  {
+    title: "Speaker and Consultant Network",
+    description:
+      "Connecting people with lived prison experience for speaking engagements, consulting, writing, and special projects.",
+  },
+  {
+    title: "Standardised Engagement Framework",
+    description:
+      "Providing fee schedules and ethical guidelines to ensure fair treatment and minimise exploitation.",
+  },
+  {
+    title: "Support and Coaching Services",
+    description:
+      "Offering advice and coaching to prepare for interviews, manage challenging situations, or debrief after difficult experiences.",
+  },
+  {
+    title: "Media and Advocacy Support",
+    description:
+      "Guiding media engagements to avoid harm and exploitation while amplifying authentic voices.",
+  },
+  {
+    title: "Systemic Advocacy and Campaigns",
+    description:
+      "Identifying and addressing systemic issues impacting the lived experience community through strategic campaigns and policy advisories.",
+  },
+];
+
+export const COMPENSATION_ITEMS = [
+  {
+    level: "Participant Level",
+    compensation: "$35 per hour (minimum 3 hours)",
+    description:
+      "for contributions requiring an individual perspective or low-medium level expertise.",
+  },
+  {
+    level: "Advisor Level",
+    compensation: "$65 per hour (minimum 3 hours)",
+    description: "for providing advanced advice or broader perspectives.",
+  },
+];
+
+export const NAV_ITEMS = [
+  { href: "#about", label: "About Us" },
+  { href: "#services", label: "Services" },
+  { href: "#impact", label: "Our Impact" },
+  { href: "#join", label: "Join Us" },
 ];
