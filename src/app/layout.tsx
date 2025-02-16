@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { inter } from "@/assets/fonts";
-import Footer from "@/components/organisms/footer";
 import { Toaster } from "@/components/atoms/ui/toaster";
 import Navbar from "@/components/organisms/navbar";
+import Footer from "@/components/organisms/footer";
 
 export const metadata: Metadata = {
   title: "NLEC app",
