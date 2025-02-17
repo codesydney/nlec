@@ -1,10 +1,10 @@
 import Link from "next/link";
-import ContentWrapper from "../molecules/content-wrapper";
-import { Button } from "../atoms/ui/button";
-import SectionTitle from "../atoms/section-title";
+import ContentWrapper from "@/components/molecules/content-wrapper";
+import { Button } from "@/components/atoms/ui/button";
+import SectionTitle from "@/components/atoms/section-title";
 import { cn } from "@/lib/utils";
 import { redHatDisplay } from "@/assets/fonts";
-import ContactUsForm from "./contact-us-form";
+import ContactUsForm from "@/components/organisms/contact-us-form";
 import { FOOTER_ITEMS } from "@/assets/data";
 
 export default function ContactUsSection() {
