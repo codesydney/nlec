@@ -5,7 +5,6 @@ import { inter } from "@/assets/fonts";
 import Footer from "@/components/organisms/footer";
 import { Toaster } from "@/components/atoms/ui/toaster";
 import Navbar from "@/components/organisms/navbar";
-import AnnouncementModal from "@/components/organisms/announcement-modal";
 
 export const metadata: Metadata = {
   title: "NLEC app",
@@ -29,10 +28,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <Toaster />
-        <AnnouncementModal
-          title="Title of the announcement"
-          content="lorem ipsum"
-        />
       </body>
     </html>
   );

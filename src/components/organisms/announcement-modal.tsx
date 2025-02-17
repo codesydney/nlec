@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Button } from "../atoms/ui/button";
+import { Button } from "@/components/atoms/ui/button";
 import { inter, redHatDisplay } from "@/assets/fonts";
 import {
   Dialog,
@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../atoms/ui/dialog";
+} from "@/components/atoms/ui/dialog";
 
 interface AnnouncementModalProps {
   shouldShow?: boolean;
