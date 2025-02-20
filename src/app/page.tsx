@@ -1,4 +1,5 @@
 import AboutSection from "@/components/organisms/about-section";
+import ContactUsSection from "@/components/organisms/contact-us";
 import HeaderSection from "@/components/organisms/header-section";
 import ImpactSection from "@/components/organisms/impact-section";
 import JoinUsSection from "@/components/organisms/join-us-section";
@@ -15,6 +16,7 @@ export default function Home() {
       <WhatWeDoSection />
       <ImpactSection />
       <JoinUsSection />
+      <ContactUsSection />
       <AnnouncementModal
         title="Title of the announcement"
         content="lorem ipsum"

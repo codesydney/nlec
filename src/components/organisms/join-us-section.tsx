@@ -8,6 +8,7 @@ import { redHatDisplay } from "@/assets/fonts";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { variants } from "@/lib/motion-variants";
+import nlecHeader from "@/public/nlec-header.webp";
 
 export default function JoinUsSection() {
   return (
@@ -56,7 +57,7 @@ export default function JoinUsSection() {
           <div className="grid h-[400px] grid-rows-[30%_auto] gap-4 md:h-full">
             <div className="relative size-full bg-nlec-maroon">
               <Image
-                src="/nlec-header.jpg"
+                src={nlecHeader}
                 fill
                 alt="Art of people together"
                 className="object-cover"
