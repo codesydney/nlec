@@ -35,7 +35,7 @@ export default function AnnouncementModal({
             redHatDisplay.className
           )}
         >
-          We have an announcement!
+          What&apos;s New
         </Button>
       </DialogTrigger>
       <DialogContent>

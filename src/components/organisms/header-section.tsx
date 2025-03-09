@@ -15,7 +15,7 @@ export default function HeaderSection() {
       animate={"animate"}
       transition={{ staggerChildren: 0.5 }}
     >
-      <div className="relative z-10 -mb-8 flex flex-col px-4 md:-mb-20 md:px-8 xl:px-20">
+      <div className="relative z-10 -mb-8 flex flex-col px-4 md:-mb-20 md:px-8 xl:px-20 2xl:mb-0">
         <motion.div
           className="z-10 mx-auto inline-flex w-full max-w-[1280px] flex-col items-end gap-4 text-nlec-green md:border-4 md:border-transparent md:border-l-nlec-green md:border-t-nlec-green md:py-8 xl:py-12"
           variants={{
