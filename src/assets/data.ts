@@ -86,3 +86,9 @@ export const NAV_ITEMS = [
   { href: "#impact", label: "Our Impact" },
   { href: "#join", label: "Join Us" },
 ];
+
+export const ANNOUNCEMENT = {
+  shouldShow: true,
+  title: "Title of the announcement",
+  content: "lorem ipsum",
+};

@@ -10,14 +10,22 @@ import NavbarLogo from "@/components/molecules/navbar-logo";
 import NavbarLinks from "../molecules/navbar-links";
 import Link from "next/link";
 import { NAV_ITEMS } from "@/assets/data";
+import { ANNOUNCEMENT } from "@/assets/data";
+import Announcement from "./announcement";
 
 export default function Navbar() {
+  const { shouldShow } = ANNOUNCEMENT;
   return (
     <nav className="fixed top-0 z-50 w-full bg-nlec-cream/75 px-4 py-2 backdrop-blur md:px-8 xl:px-20">
       <section className="flex items-center justify-between">
         <NavbarLogo />
         <ul className="hidden gap-2 md:inline-flex">
           <NavbarLinks items={NAV_ITEMS} />
+          {shouldShow && (
+            <li>
+              <Announcement />
+            </li>
+          )}
         </ul>
         <Sheet>
           <SheetTrigger asChild>
@@ -36,6 +44,11 @@ export default function Navbar() {
                   </SheetClose>
                 </li>
               ))}
+              {shouldShow && (
+                <li>
+                  <Announcement />
+                </li>
+              )}
             </ul>
           </SheetContent>
         </Sheet>
