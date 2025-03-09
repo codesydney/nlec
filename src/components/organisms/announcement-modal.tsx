@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/atoms/ui/button";
 import { inter, redHatDisplay } from "@/assets/fonts";
@@ -29,7 +31,7 @@ export default function AnnouncementModal({
       <DialogTrigger asChild>
         <Button
           className={cn(
-            "fixed bottom-0 right-0 mb-4 mr-4 font-bold",
+            "whitespace-normal text-left font-bold",
             redHatDisplay.className
           )}
         >
