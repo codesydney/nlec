@@ -3,9 +3,16 @@ import ContentWrapper from "@/components/molecules/content-wrapper";
 import { Button } from "@/components/atoms/ui/button";
 import SectionTitle from "@/components/atoms/section-title";
 import { cn } from "@/lib/utils";
-import { redHatDisplay } from "@/assets/fonts";
+import { inter, redHatDisplay } from "@/assets/fonts";
 import ContactUsForm from "@/components/organisms/contact-us-form";
 import { FOOTER_ITEMS } from "@/assets/data";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../atoms/ui/dialog";
 
 export default function ContactUsSection() {
   return (
@@ -47,16 +54,21 @@ export default function ContactUsSection() {
             </div>
             <p>Empowering lived prison experiences for a better tomorrow.</p>
             <div className="divide-x-2 divide-nlec-green">
-              {FOOTER_ITEMS["TOS-PP"].map((link, i) => (
-                <Button
-                  asChild
-                  variant="link"
-                  className={`rounded-none p-0 ${i === 0 ? "pr-4" : "pl-4"}`}
-                  key={i}
-                >
-                  <Link href={link.href}>{link.label}</Link>
-                </Button>
-              ))}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="link" className="rounded-none p-0">
+                    {FOOTER_ITEMS.PP.label}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Privacy Policy</DialogTitle>
+                  </DialogHeader>
+                  <section className={cn(inter.className)}>
+                    <p>{FOOTER_ITEMS.PP.content}</p>
+                  </section>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>

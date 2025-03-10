@@ -25,10 +25,11 @@ export const FOOTER_ITEMS = {
     { icon: Twitter, href: "#" },
     { icon: Instagram, href: "#" },
   ],
-  "TOS-PP": [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms Of Use", href: "#" },
-  ],
+  PP: {
+    label: "Privacy Policy",
+    content:
+      "At National Lived Experience Collective, we are committed to protecting your privacy and handling your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). When you use our contact form, we collect your name, email address, and phone number solely to respond to your inquiries and provide our services. We will not disclose your information to third parties unless required by law or with your consent, and we take reasonable steps to safeguard your data from misuse, loss, or unauthorised access. You may request access to or correction of your personal information at any time by contacting us. For more details on how we handle your information, please contact us.",
+  },
 };
 
 export const IMPACT_ITEMS = [
