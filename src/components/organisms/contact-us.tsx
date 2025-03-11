@@ -12,7 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../atoms/ui/dialog";
+} from "@/components/atoms/ui/dialog";
 
 export default function ContactUsSection() {
   return (
