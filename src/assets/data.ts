@@ -91,5 +91,5 @@ export const NAV_ITEMS = [
 export const ANNOUNCEMENT = {
   shouldShow: true,
   title: "Welcome to National Lived Experience Collective!",
-  content: "",
+  content: "We are dedicated to amplifying voices, driving systemic change, and empowering those with lived prison experiences. Our mission is to advocate for social change, ensuring fair engagement and respect for our community. Join us in shaping a better future. Explore our services and get involved.",
 };
