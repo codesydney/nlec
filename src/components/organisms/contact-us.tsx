@@ -35,7 +35,7 @@ export default function ContactUsSection() {
                 </Button>
               </div>
             ))}
-            <div className="inline-flex flex-col gap-2">
+            {/* <div className="inline-flex flex-col gap-2">
               <h3 className="text-3xl font-bold">Socials</h3>
               <div className="inline-flex gap-4">
                 {FOOTER_ITEMS.socials.map((social, i) => (
@@ -51,7 +51,7 @@ export default function ContactUsSection() {
                   </Button>
                 ))}
               </div>
-            </div>
+            </div> */}
             <p>Empowering lived prison experiences for a better tomorrow.</p>
             <div className="divide-x-2 divide-nlec-green">
               <Dialog>
