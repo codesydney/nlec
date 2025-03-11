@@ -90,6 +90,6 @@ export const NAV_ITEMS = [
 
 export const ANNOUNCEMENT = {
   shouldShow: true,
-  title: "Title of the announcement",
-  content: "lorem ipsum",
+  title: "Welcome to National Lived Experience Collective!",
+  content: "",
 };
