@@ -11,7 +11,7 @@ export default function NavbarLogo() {
       size="sm"
       className={cn("font-bold", redHatDisplay.className)}
     >
-      <Link href="#">NLEC</Link>
+      <Link href="#">National Lived Experience Collective</Link>
     </Button>
   );
 }
