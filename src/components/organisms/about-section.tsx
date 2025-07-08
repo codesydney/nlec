@@ -20,13 +20,13 @@ export default function AboutSection() {
           variants={variants}
           className="w-4/5 self-end text-lg md:text-xl xl:text-2xl"
         >
-          We are the national collective of formerly incarcerated people across
+          We are a national collective of formerly incarcerated people across
           Australia, uniting lived prison experiences to drive advocacy,
           insight, and meaningful change. Our mission is to serve as a central
           hub for people and organisations seeking expertise, consulting, and
           perspectives informed by lived experiences. We aim to amplify voices,
           set standards for fair engagement, and foster systemic change while
-          ensuring dignity and respect for the community we represent.
+          ensuring dignity and respect for our community members.
         </motion.p>
       </ContentWrapper>
     </SectionWrapper>
