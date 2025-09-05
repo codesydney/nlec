@@ -6,8 +6,8 @@ export const FOOTER_ITEMS = {
   links: [
     {
       label: "Email",
-      content: "tina@justicereforminitiative.org.au",
-      href: "mailto:tina@justicereforminitiative.org.au",
+      content: "askus@nlecollective.com.au",
+      href: "mailto:askus@nlecollective.com.au",
     },
     // {
     //   label: "Phone",
@@ -91,5 +91,6 @@ export const NAV_ITEMS = [
 export const ANNOUNCEMENT = {
   shouldShow: true,
   title: "Welcome to National Lived Experience Collective!",
-  content: "We are dedicated to amplifying voices, driving systemic change, and empowering those with lived prison experiences. Our mission is to advocate for social change, ensuring fair engagement and respect for our community. Join us in shaping a better future. Explore our services and get involved.",
+  content:
+    "We are dedicated to amplifying voices, driving systemic change, and empowering those with lived prison experiences. Our mission is to advocate for social change, ensuring fair engagement and respect for our community. Join us in shaping a better future. Explore our services and get involved.",
 };
